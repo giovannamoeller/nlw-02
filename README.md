@@ -1,2 +1,3 @@
-# nlw-02
-Projeto Proffy desenvolvido durante a NLW - 02
+# Next Level Week - 02
+
+Projeto Proffy - Criação de uma plataforma de contratação de professores.
