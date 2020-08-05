@@ -133,6 +133,20 @@ footer p {
     padding: 0 3.2rem;
   }
 
+  .teacher-item footer button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20rem;
+      padding: 2.5rem;
+      font-size: 1.8rem !important;
+  }
+
+  .teacher-item footer button img {
+      margin-left: 1rem;
+      margin-right: 0;
+  }
+
   .teacher-item footer p strong {
     display: initial;
     margin-left: 2.5rem;
