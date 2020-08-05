@@ -7,7 +7,7 @@
   background-color: var(--color-box-base);
   border: 1px solid var(--color-line-in-white);
   margin-top: 2.4rem;
-  border-radius: 0.8em;
+  border-radius: 8px;
 }
 
 .teacher-item header img {
@@ -48,36 +48,39 @@
   margin-top: -1.4rem;
   line-height: 3rem;
   color: var(--color-text-base);
-  padding: 1.6rem;
+  padding: 2.2rem;
 }
 
 .teacher-item footer {
   width: 100%;
-  height: auto;
-  padding: 2.5rem 2rem;
+  padding: 1.5em;
   border-top: 1px solid var(--color-line-in-white);
   background-color: var(--color-box-footer);
-
+  border-radius: 0 0 8px 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .teacher-item footer button {
-  width: 25rem;
-  padding: 1.5rem 4rem;
-  height: 5.6rem;
+  display: flex;
+  padding: 1.5rem 2rem;
   border-radius: 0.8rem;
   border: none;
-  display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+
   font: 700 1.4rem Archivo;
-  line-height: 2.6rem;
   background-color: var(--color-secundary);
   color: white;
   cursor: pointer;
   transition: 200ms;
+
+  box-sizing: border-box;
+}
+
+.teacher-item footer button img {
+    margin-right: 0.4rem;
 }
 
 .teacher-item footer button:hover {
@@ -94,6 +97,7 @@ footer p {
   display: block;
   color: var(--color-text-complement);
   font-size: 1.4rem;
+  padding: 0 !important;
 }
 
 @media (min-width: 700px) {
@@ -131,12 +135,13 @@ footer p {
 
   .teacher-item footer p strong {
     display: initial;
-    margin-left: 1.6rem;
+    margin-left: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .teacher-item footer button {
     width: 24.5rem;
-    font-size: 1.6em;
-    justify-content: center;
+    font-size: 1em;
+    justify-content: space-between;
   }
 }
