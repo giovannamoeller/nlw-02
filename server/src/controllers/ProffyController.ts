@@ -49,11 +49,15 @@ const Proffy = {
 
       await trx.commit();
 
-      return res.json({ message: "success" });
+      return res.status(201).send(); // 201 - criado com sucesso
     } catch (err) {
       return res.status(400).json({ message: err });
     }
   },
+
+  async getProffys(req: Request, res: Response) {
+      
+  }
 };
 
 export default Proffy;

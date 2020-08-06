@@ -4,7 +4,7 @@ const routes = express.Router();
 
 import Proffy from './controllers/ProffyController';
 
-//routes.get('/proffys', Proffy.createProffy);
+routes.get('/classes', Proffy.getProffys);
 
 routes.post('/classes', Proffy.createProffy);
 
