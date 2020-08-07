@@ -1,30 +1,31 @@
-.input-block {
+.select-block {
   position: relative;
 }
 
-.input-block + .input-block {
+.select-block + .select-block {
   margin-top: 1.4rem;
 }
 
-.input-block:last-child {
+.select-block:last-child {
   margin-bottom: 2rem;
 }
 
-.input-block input {
+.select-block select {
   border-radius: 8px;
   background-color: var(--color-box-footer);
   border: none;
   border: 1px solid #e6e6f0;
   width: 100%;
-  height: 5.6rem;
+  height: 5.4rem;
   outline: 0;
-  padding: 0 1.6rem;
+  padding: 1.2rem 1.6rem;
   margin-top: 0.8rem;
   font: 1.6rem Archivo;
+  margin-bottom: 1.6rem;
 }
 
-/*  .input-block:focus-within::after {
-  input-block quanto tiver focus no input 
+/*  .select-block:focus-within::after {
+  textarea-block quanto tiver focus no input 
   width: 80%;
   text-align: center;
   height: 0.5px;
@@ -37,7 +38,7 @@
 } */
 
 @media (min-width: 700px) {
-  .input-block + .input-block {
+  .select-block + .select-block {
     margin: 0;
   }
 }
