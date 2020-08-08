@@ -2,41 +2,58 @@ import React from 'react';
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './style.css';
+import api from '../../services/api';
 
-const TeacherItem = () => {
-    return (
+export interface Teacher {
+  name: string;
+  avatar_url: string;
+  biography: string;
+  price: number;
+  id: number;
+  subject: string;
+  whatsapp: string;
+}
+
+interface TeacherItemProps {
+  teacher: Teacher;
+}
+
+const TeacherItem:React.FC<TeacherItemProps> = ({ teacher }) => { // FC = Function Component
+  
+  function createNewConnection() {
+    api.post('/connections', {
+      user_id: teacher.id
+    })
+  }
+  
+  return (
         <main>
         <article className="teacher-item">
           <header>
             <img
-              src="https://avatars1.githubusercontent.com/u/47362960?s=460&u=99702db3dedab50f47b0f151acea1e2e9db1b3fc&v=4"
+              src={teacher.avatar_url}
               alt=""
             />
             <div>
-              <strong>Giovanna</strong>
-              <span>Química</span>
+              <strong>{teacher.name}</strong>
+              <span>{teacher.subject}</span>
             </div>
           </header>
 
           <div>
             <p>
-              Entusiasta das melhores tecnologias de química avançada.
-              <br />
-              <br />
-              Apaixonada por explodir coisas em laboratório e por mudar a vida
-              das pessoas através de experiências. Mais de 200.000 pessoas já
-              passaram por uma das minhas explosões.
+              {teacher.biography}
             </p>
           </div>
 
           <footer>
             <p>Preço/hora
-                <strong>R$ 80,00</strong>
+                <strong>R$ {teacher.price}</strong>
             </p>
 
-            <button type="button">
+            <a onClick={createNewConnection} target="_blank" href={`https://wa.me/${teacher.whatsapp}`}>
                 <img src={whatsappIcon} alt=""/>Entrar em contato
-            </button>
+            </a>
           </footer>
 
         </article>
