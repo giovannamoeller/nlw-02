@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 
 
 import styles from './styles';
+import PageHeader from '../../componentes/PageHeader';
 
 const TeacherList = () => {
 
@@ -11,7 +12,7 @@ const TeacherList = () => {
 
     return (
         <View style={styles.container}>
-            <Text>Oiii</Text>
+            <PageHeader title="Proffys Disponíveis"/>
         </View>
     )
 };
