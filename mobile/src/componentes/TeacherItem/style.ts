@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#e6e6f0',
         overflow: 'hidden', /* se existir algo fora ele vai esconder */
-        marginTop: -20,
-        marginBottom: 40,
+        marginTop: -40,
+        marginBottom: 60,
         width: 320,
     },
 

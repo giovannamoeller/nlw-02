@@ -5,9 +5,8 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 40,
         backgroundColor: '#8257e5',
-        maxHeight: 280,
         marginTop: -40,
-        width: 380
+        width: 380,
     },
 
     topBar: {
@@ -17,13 +16,19 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
 
+    header: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
+
     title: {
         fontFamily: 'Archivo_700Bold',
         color: 'white',
         lineHeight: 32,
         maxWidth: 160,
-        marginVertical: 40,
-        fontSize: 24
+        marginVertical: 20,
+        fontSize: 24,
     }
     
 });
