@@ -16,6 +16,10 @@ const Landing = () => {
         navigate('GiveClasses');
     }
 
+    function handleNavigateToStudyPages() {
+        navigate('Study');
+    }
+
 
     return (
         <View style={styles.container}>
@@ -25,7 +29,7 @@ const Landing = () => {
                 <Text style={styles.h2}>O que deseja fazer?</Text>
             </View>
             <View style={styles.buttonsContainer}>
-                <TouchableOpacity style={[styles.button, styles.buttonPrimary]} onPress={() => {}}>
+                <TouchableOpacity style={[styles.button, styles.buttonPrimary]} onPress={handleNavigateToStudyPages}>
                     <Image source={studyIcon}/>
                     <Text style={styles.textButton}>Estudar</Text>
                 </TouchableOpacity>

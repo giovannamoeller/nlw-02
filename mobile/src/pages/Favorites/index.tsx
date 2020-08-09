@@ -5,9 +5,11 @@ import { useNavigation } from '@react-navigation/native'
 
 import styles from './styles';
 
-const TeacherList = () => {
+const Favorites = () => {
 
     const { navigate } = useNavigation();
+
+
 
     return (
         <View style={styles.container}>
@@ -16,4 +18,4 @@ const TeacherList = () => {
     )
 };
 
-export default TeacherList;
+export default Favorites;
