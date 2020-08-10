@@ -35,6 +35,27 @@ const styles = StyleSheet.create({
         width: '48%',
     },
 
+    filterButton: {
+        backgroundColor: '#04D361',
+        borderRadius: 8,
+        padding: 15,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
+    filterButtonText: {
+        fontFamily: 'Archivo_700Bold',
+        color: 'white',
+    },
+
+    textNotFilter: {
+        fontFamily: 'Archivo_700Bold',
+        color: '#8257E5',
+        fontSize: 18,
+        marginTop: 40
+    }
+
     
 });
 

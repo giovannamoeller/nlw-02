@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, useFocusEffect } from '@react-navigation/native'
 
 import landingImg from '../../assets/images/landing.png';
 import studyIcon from '../../assets/images/icons/study.png';
@@ -8,7 +8,11 @@ import giveClassesIcon from '../../assets/images/icons/give-classes.png';
 import heartIcon from '../../assets/images/icons/heart.png';
 import styles from './styles';
 
+import api from '../../services/api';
+
 const Landing = () => {
+
+    const [totalConnections, setTotalConnections] = useState(0);
 
     const { navigate } = useNavigation();
 
@@ -19,6 +23,13 @@ const Landing = () => {
     function handleNavigateToStudyPages() {
         navigate('Study');
     }
+
+    useFocusEffect(() => {
+        api.get('/connections').then(response => {
+            const { total } = response.data;
+            setTotalConnections(Number(total));
+        });
+    }); 
 
 
     return (
@@ -38,7 +49,7 @@ const Landing = () => {
                     <Text style={styles.textButton}>Dar aulas</Text>
                 </TouchableOpacity>
             </View>
-            <Text style={styles.connectionText}>Total de 285 conexões já realizadas {' '} 
+            <Text style={styles.connectionText}>Total de {totalConnections} conexões já realizadas {' '} 
                 <Image source={heartIcon}/>
             </Text>
         </View>
